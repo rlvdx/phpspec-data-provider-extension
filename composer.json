@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "license": "MIT",
     "require" : {
-        "php" : ">=7.0",
+        "php" : ">=7.1",
         "phpspec/phpspec": ">=4.0"
     },
     "repositories" : [ {
@@ -28,5 +28,8 @@
     "authors" : [ {
         "name" : "Adil El Kanabi",
         "email" : "adil.kanabi@gmail.com"
-    } ]
+    } ],
+    "scripts": {
+        "test": "./vendor/bin/phpspec run"
+    }
 }
