@@ -17,7 +17,7 @@ class Maintainer implements \PhpSpec\Runner\Maintainer\Maintainer
 		return $this->haveValidDataProvider($example);
 	}
 
-	public function prepare(ExampleNode $example, Specification $context, MatcherManager $matchers, CollaboratorManager $collaborators)
+	public function prepare(ExampleNode $example, Specification $context, MatcherManager $matchers, CollaboratorManager $collaborators): void
 	{
 		$exampleNum = $this->getExampleNumber($example->getTitle());
 		if (! array_key_exists($exampleNum, $this->providedData)) {
@@ -34,9 +34,8 @@ class Maintainer implements \PhpSpec\Runner\Maintainer\Maintainer
 		}
 	}
 
-	public function teardown(ExampleNode $example, Specification $context, MatcherManager $matchers, CollaboratorManager $collaborators)
+	public function teardown(ExampleNode $example, Specification $context, MatcherManager $matchers, CollaboratorManager $collaborators): void
 	{
-		return true;
 	}
 
 	public function getPriority(): int
