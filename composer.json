@@ -28,5 +28,8 @@
     "authors" : [ {
         "name" : "Adil El Kanabi",
         "email" : "adil.kanabi@gmail.com"
-    } ]
+    } ],
+    "scripts": {
+        "test": "./vendor/bin/phpspec run"
+    }
 }
